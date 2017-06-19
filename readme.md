@@ -1,13 +1,13 @@
-# angular2-color-picker
-Angular 2 Color Picker Directive/Component with no dependencies required.<br />
-This is a Color Picker Directive/Component for Angular 2.
+# narik-angular-color-picker
+Angular 4 Color Picker Directive/Component with no dependencies required.<br />
+This is a Color Picker Directive/Component for Angular 4.
 
 # Demo page
 http://alberplz.github.io/angular2-color-picker/examples/index.html
 
 # Installation
 ```bash
-npm i --save angular2-color-picker
+npm i --save narik-angular-color-picker
 ```
 
 # Usage
@@ -22,7 +22,7 @@ npm i --save angular2-color-picker
 
 * Add ColorPickerModule in your app.module.ts:
 ```javascript
-import {ColorPickerModule} from 'angular2-color-picker';
+import {ColorPickerModule} from 'narik-angular-color-picker';
 
 @NgModule({
     ...
@@ -33,7 +33,7 @@ import {ColorPickerModule} from 'angular2-color-picker';
 * Set color the variable. You can use ColorPickerService in your component if you want extra functions.
 ```javascript
 import {Component} from '@angular/core';
-import {ColorPickerService} from 'angular2-color-picker';
+import {ColorPickerService} from 'narik-angular-color-picker';
 
 @Component({
     selector: 'my-app',
@@ -50,20 +50,20 @@ export class AppComponent {
 ```javascript
 var map = {
         ...    
-        'angular2-color-picker': 'node_modules/angular2-color-picker'
+        'narik-angular-color-picker': 'node_modules/narik-angular-color-picker',
     };
 var packages = {
         ...
-        'angular2-color-picker': {main:'index.js', defaultExtension: 'js'}
+        'narik-angular-color-picker': {main: 'dist/umd/narik-angular-color-picker', defaultExtension: 'js'}
     };
 ```
 #Build
 ```bash
-git clone https://github.com/Alberplz/angular2-color-picker.git
+git clone https://github.com/abadakhshan/narik-angular-color-picker
 npm install
-cd agular2-color-picker
-npm run build
-gulp copylib
+cd narik-angular-color-picker
+npm run build:dist
+
 ```
 
 #Options
@@ -91,9 +91,6 @@ Default option is the first item.
 [cpAlphaChannel]="'hex6', 'hex8', 'disabled'"
 ```
 
-#Extra content
-If you want to change precalculated images for color picker sliders, you can find a little script in this project:
-https://github.com/Alberplz/angular-colorpicker-directive
 
 #Tested in:
 * Chrome
@@ -102,6 +99,3 @@ https://github.com/Alberplz/angular-colorpicker-directive
 * Opera
 * Safari
 * Internet Explorer
-
-#For previous version of Angular:
-https://github.com/Alberplz/angular-colorpicker-directive

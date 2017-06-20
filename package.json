@@ -28,13 +28,12 @@
     "url": "git+https://github.com/abadakhshan/narik-angular-color-picker.git"
   },
   "keywords": [
+   "narik",
     "angular",
     "angular2",
     "angular4",
     "bootstrap",
-    "popover",
-    "confirm",
-    "confirmation"
+    "colorPicker"
   ],
   "author": "Matt Lewis",
   "license": "MIT",

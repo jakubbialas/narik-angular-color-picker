@@ -3,7 +3,7 @@ Angular 4 Color Picker Directive/Component with no dependencies required.<br />
 This is a Color Picker Directive/Component for Angular 4.
 
 # Demo page
-http://alberplz.github.io/angular2-color-picker/examples/index.html
+https://abadakhshan.github.io/narik-angular-color-picker/
 
 # Installation
 ```bash

@@ -1,7 +1,7 @@
-import {Component, OnChanges, Directive, Input, Output, ViewContainerRef, ElementRef, EventEmitter, OnInit, ViewChild} from '@angular/core';
-import {ColorPickerService} from './color-picker.service';
-import {Rgba, Hsla, Hsva, SliderPosition, SliderDimension} from './classes';
-import {NgModule, Compiler, ReflectiveInjector} from '@angular/core';
+import { Component, OnChanges, Directive, Input, Output, ViewContainerRef, ElementRef, EventEmitter, OnInit, ViewChild } from '@angular/core';
+import { ColorPickerService } from './color-picker.service';
+import { Rgba, Hsla, Hsva, SliderPosition, SliderDimension } from './classes';
+import { NgModule, Compiler, ReflectiveInjector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Directive({
@@ -62,12 +62,16 @@ export class ColorPickerDirective implements OnInit, OnChanges {
     }
 
     ngOnInit() {
-        // let hsva = this.service.stringToHsva(this.colorPicker);
-        // if (hsva === null) hsva = this.service.stringToHsva(this.colorPicker, true);
-        // if (hsva == null) {
-        //     hsva = this.service.stringToHsva(this.cpFallbackColor);
-        // }
-        // this.colorPickerChange.emit(this.service.outputFormat(hsva, this.cpOutputFormat, this.cpAlphaChannel === 'hex8'));
+
+    }
+
+    checkInitValue() {
+        let hsva = this.service.stringToHsva(this.colorPicker);
+        if (hsva === null) hsva = this.service.stringToHsva(this.colorPicker, true);
+        if (hsva == null) {
+            hsva = this.service.stringToHsva(this.cpFallbackColor);
+        }
+        this.colorPickerChange.emit(this.service.outputFormat(hsva, this.cpOutputFormat, this.cpAlphaChannel === 'hex8'));
     }
 
     onClick() {
@@ -84,7 +88,7 @@ export class ColorPickerDirective implements OnInit, OnChanges {
                     const compFactory = factory.componentFactories.find(x => x.componentType === DialogComponent);
                     const injector = ReflectiveInjector.fromResolvedProviders([], this.vcRef.parentInjector);
                     const cmpRef = this.vcRef.createComponent(compFactory, 0, injector, []);
-                    cmpRef.instance.setDialog(this, this.el, this.colorPicker, this.cpPosition, this.cpPositionOffset,
+                    cmpRef.instance.setDialog(this, this.el, this.colorPicker || this.cpFallbackColor, this.cpPosition, this.cpPositionOffset,
                         this.cpPositionRelativeToArrow, this.cpOutputFormat, this.cpPresetLabel, this.cpPresetColors,
                         this.cpCancelButton, this.cpCancelButtonClass, this.cpCancelButtonText,
                         this.cpOKButton, this.cpOKButtonClass, this.cpOKButtonText, this.cpHeight, this.cpWidth,

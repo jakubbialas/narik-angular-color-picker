@@ -13,6 +13,10 @@ npm i --save narik-angular-color-picker
 # Usage
 * Use it in your HTML elements, for example:
 ```html
+<narik-color-input [itemClass]='color-picker'   [(ngModel)]="color"></narik-color-input>
+```
+* Or:
+```html
 <input [(colorPicker)]="color" [style.background]="color" [value]="color"/>
 ```
 * Or:

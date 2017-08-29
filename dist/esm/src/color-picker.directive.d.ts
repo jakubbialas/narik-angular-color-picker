@@ -162,3 +162,5 @@ export declare class DialogComponent implements OnInit {
     isDescendant(parent: any, child: any): boolean;
     createBox(element: any, offset: boolean): any;
 }
+export declare class DynamicCpModule {
+}

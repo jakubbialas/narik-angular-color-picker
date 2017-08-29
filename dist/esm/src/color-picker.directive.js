@@ -526,6 +526,7 @@ var DynamicCpModule = (function () {
     }
     return DynamicCpModule;
 }());
+export { DynamicCpModule };
 DynamicCpModule.decorators = [
     { type: NgModule, args: [{
                 imports: [BrowserModule],

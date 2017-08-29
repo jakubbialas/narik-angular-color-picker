@@ -540,4 +540,4 @@ export class DialogComponent implements OnInit {
     imports: [BrowserModule],
     declarations: [DialogComponent, TextDirective, SliderDirective]
 })
-class DynamicCpModule { };
+export class DynamicCpModule { };

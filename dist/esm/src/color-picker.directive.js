@@ -155,7 +155,6 @@ var TextDirective = (function () {
     };
     return TextDirective;
 }());
-export { TextDirective };
 TextDirective.decorators = [
     { type: Directive, args: [{
                 selector: '[text]',
@@ -219,7 +218,6 @@ var SliderDirective = (function () {
     };
     return SliderDirective;
 }());
-export { SliderDirective };
 SliderDirective.decorators = [
     { type: Directive, args: [{
                 selector: '[slider]',
@@ -503,7 +501,6 @@ var DialogComponent = (function () {
     };
     return DialogComponent;
 }());
-export { DialogComponent };
 DialogComponent.decorators = [
     { type: Component, args: [{
                 selector: 'color-picker',
@@ -526,7 +523,6 @@ var DynamicCpModule = (function () {
     }
     return DynamicCpModule;
 }());
-export { DynamicCpModule };
 DynamicCpModule.decorators = [
     { type: NgModule, args: [{
                 imports: [BrowserModule],

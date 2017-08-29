@@ -121,7 +121,7 @@ export class ColorPickerDirective implements OnInit, OnChanges {
         '(input)': 'changeInput($event.target.value)'
     }
 })
-export class TextDirective {
+class TextDirective {
     @Output('newValue') newValue = new EventEmitter<any>();
     @Input('text') text: any;
     @Input('rg') rg: number;
@@ -145,7 +145,7 @@ export class TextDirective {
         '(touchstart)': 'start($event)'
     }
 })
-export class SliderDirective {
+class SliderDirective {
     @Output('newValue') newValue = new EventEmitter<any>();
     @Input('slider') slider: string;
     @Input('rgX') rgX: number;
@@ -207,7 +207,7 @@ export class SliderDirective {
     styleUrls: ['./templates/default/color-picker.scss']
 })
 
-export class DialogComponent implements OnInit {
+class DialogComponent implements OnInit {
     private hsva: Hsva;
     private rgbaText: Rgba;
     private hslaText: Hsla;
@@ -540,4 +540,4 @@ export class DialogComponent implements OnInit {
     imports: [BrowserModule],
     declarations: [DialogComponent, TextDirective, SliderDirective]
 })
-export class DynamicCpModule { };
+class DynamicCpModule { };

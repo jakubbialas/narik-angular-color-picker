@@ -1,6 +1,6 @@
 {
   "name": "narik-angular-color-picker",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "narik-angular-color-picker",
   "main": "./dist/umd/narik-angular-color-picker.js",
   "module": "./dist/umd/narik-angular-color-picker.js",
